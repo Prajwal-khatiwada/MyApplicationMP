@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Application(MP)</string>
+    <string name="welcome">Welcome</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string-array name="country_list">
+        <item>Nepal</item>
+        <item>India</item>
+        <item>China</item>
+        <item>Japan</item>
+        <item>Australia</item>
+
+    </string-array>
+
+</resources>
