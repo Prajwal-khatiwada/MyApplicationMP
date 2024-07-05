@@ -2,8 +2,17 @@ package com.example.myapplicationmp.unit_4;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.AbsoluteSizeSpan;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.LeadingMarginSpan;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -22,12 +31,17 @@ import com.google.android.material
 
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import com.example.myapplicationmp.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Home extends Activity {
+public class Home extends AppCompatActivity {
 
     private Button submitBtn;
 
@@ -39,17 +53,76 @@ public class Home extends Activity {
 
     private RadioGroup genderGroup;
 
+    private Button press_me_button;
+
     @Override
     protected void onStart() {
         super.onStart();
         Log.d("myStateLog", "Home-onStart");
+
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.button_color));
+
+        if (getSupportActionBar() != null) {
+            ActionBar bar = getSupportActionBar();
+            int color = ContextCompat.getColor(this, R.color.button_color);
+            int textColor = ContextCompat.getColor(this, R.color.black);
+            Spannable text = new SpannableString("My Application");
+
+            text.setSpan(new ForegroundColorSpan(textColor), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            text.setSpan(new AbsoluteSizeSpan(20, true), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            text.setSpan(new LeadingMarginSpan.Standard(20), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+
+            bar.setTitle(text);
+            bar.setElevation(10);
+            bar.setBackgroundDrawable(new ColorDrawable(color));
+        }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.app_options, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(android.view.MenuItem item) {
+        String close = "Go Away";
+        int selectedItem = item.getItemId();
+
+        if (selectedItem == R.id.appOptionsAbout) {
+            Intent i = new Intent(Home.this, About.class);
+            startActivity(i);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        getMenuInflater().inflate(R.menu.app_options, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        String close = "Go Away";
+        int selectedItem = item.getItemId();
+        if (selectedItem == R.id.appOptionsAbout) {
+            Intent i = new Intent(Home.this, About.class);
+            startActivity(i);
+            return true;
+        }
+        return super.onContextItemSelected(item);
+    }
+
 
     @Override
     protected void onResume() {
         super.onResume();
         Log.d("myStateLog", "Home-onResume");
         Toast.makeText(getApplicationContext(), "Resumed", Toast.LENGTH_SHORT).show();
+        registerForContextMenu(press_me_button);
     }
 
     @Override
@@ -86,6 +159,7 @@ public class Home extends Activity {
         }
     }
 
+
     @Override
     public void onCreate(Bundle b) {
         super.onCreate(b);
@@ -105,6 +179,7 @@ public class Home extends Activity {
         cancel_button = findViewById(R.id.cancel_button);
         genderGroup = findViewById(R.id.radioGroup);
         contact_button = findViewById(R.id.contact_button);
+        press_me_button = findViewById(R.id.press_me_button);
 
         CheckBox footballCheckbox = findViewById(R.id.checkbox_football);
         CheckBox basketballCheckbox = findViewById(R.id.checkbox_basketball);
