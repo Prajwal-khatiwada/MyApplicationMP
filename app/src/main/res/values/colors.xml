@@ -11,8 +11,7 @@
     <color name="background_color">#fae9bb</color>
     <color name="button_color">#f0c143</color>
     <color name="transparent">#00FFFFFF</color>
-
-
+    <color name="sky_blue">#BBE9FF</color>
 
 
 </resources>
