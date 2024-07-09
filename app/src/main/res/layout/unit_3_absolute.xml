@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="40dp"
+        android:layout_y="40dp"
+        android:background="@color/button_color"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="10dp"
+        android:text="Hello!"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="80dp"
+        android:layout_y="120dp"
+        android:background="@color/button_color"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="10dp"
+        android:text="Hello Again!"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="240dp"
+        android:layout_y="205dp"
+        android:background="@color/button_color"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="10dp"
+        android:text="Hello !"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+</AbsoluteLayout>

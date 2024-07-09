@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:padding="20dp">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@color/tan"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Block One"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@color/pink"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Block Two"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@color/purple"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Block Three"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@color/button_color"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Block Four"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@color/mint"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Block Five"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@color/muddy_green"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Block Six"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </TableRow>
+</TableLayout>

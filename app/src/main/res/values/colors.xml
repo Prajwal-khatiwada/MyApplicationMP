@@ -13,6 +13,9 @@
     <color name="transparent">#00FFFFFF</color>
     <color name="sky_blue">#BBE9FF</color>
     <color name="tan">#B68D40</color>
-
+    <color name="purple">#B1AFFF</color>
+    <color name="pink">#F075AA</color>
+    <color name="mint">#E9FF97</color>
+    <color name="muddy_green">#698474</color>
 
 </resources>
