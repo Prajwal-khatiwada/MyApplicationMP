@@ -1,6 +1,7 @@
 package com.example.myapplicationmp.unit_4;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.LeadingMarginSpan;
 import android.util.Log;
 import android.view.ContextMenu;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -33,10 +35,12 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.example.myapplicationmp.R;
+import com.example.myapplicationmp.util.AlertUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -54,6 +58,8 @@ public class Home extends AppCompatActivity {
     private RadioGroup genderGroup;
 
     private Button press_me_button;
+    private Button calculator_button;
+
 
     @Override
     protected void onStart() {
@@ -181,6 +187,7 @@ public class Home extends AppCompatActivity {
         contact_button = findViewById(R.id.contact_button);
         press_me_button = findViewById(R.id.press_me_button);
 
+
         CheckBox footballCheckbox = findViewById(R.id.checkbox_football);
         CheckBox basketballCheckbox = findViewById(R.id.checkbox_basketball);
         CheckBox cricketCheckbox = findViewById(R.id.checkbox_cricket);
@@ -207,6 +214,36 @@ public class Home extends AppCompatActivity {
 
 
 //
+        press_me_button.setOnClickListener(v -> {
+            AlertUtil alert = new AlertUtil(this);
+            alert.show(getSupportFragmentManager(), "alert");
+        });
+
+        submitBtn.setOnLongClickListener(v -> {
+            LayoutInflater inflater = getLayoutInflater();
+            View CalculatorView = inflater.inflate(R.layout.calculator, null);
+
+
+            TextView result = CalculatorView.findViewById(R.id.addCalculatorResultValue);
+            EditText num1 = CalculatorView.findViewById(R.id.addCalculatorFirstNumberInput);
+            EditText num2 = CalculatorView.findViewById(R.id.addCalculatorSecondNumberInput);
+            Button addBtn = CalculatorView.findViewById(R.id.addCalculatorCalculateButton);
+
+            addBtn.setOnClickListener(v1 -> {
+                int first, second, resultnum;
+
+                first = Integer.parseInt(num1.getText().toString());
+                second = Integer.parseInt(num2.getText().toString());
+                resultnum = first + second;
+                result.setText(String.valueOf(resultnum));
+            });
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setView(CalculatorView);
+            builder.show();
+            return true;
+        });
+
+
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
