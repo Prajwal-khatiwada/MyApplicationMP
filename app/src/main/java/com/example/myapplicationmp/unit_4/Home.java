@@ -27,6 +27,7 @@ import android.widget.TextView;
 import com.example.myapplicationmp.unit_2.Unit_2;
 import com.example.myapplicationmp.unit_4.About;
 import com.example.myapplicationmp.unit_4.Contact;
+import com.example.myapplicationmp.unit_6.ListViewMain;
 import com.google.android.material
         .snackbar
         .Snackbar;
@@ -96,12 +97,11 @@ public class Home extends AppCompatActivity {
         int selectedItem = item.getItemId();
 
         if (selectedItem == R.id.appOptionsAbout) {
-            Intent i = new Intent(Home.this, About.class);
+            Intent i = new Intent(Home.this, ListViewMain.class);
             startActivity(i);
             return true;
         }
-
-        return super.onOptionsItemSelected(item);
+        return false;
     }
 
     @Override
@@ -120,6 +120,7 @@ public class Home extends AppCompatActivity {
             return true;
         }
         return super.onContextItemSelected(item);
+
     }
 
 
@@ -186,6 +187,7 @@ public class Home extends AppCompatActivity {
         genderGroup = findViewById(R.id.radioGroup);
         contact_button = findViewById(R.id.contact_button);
         press_me_button = findViewById(R.id.press_me_button);
+        calculator_button = findViewById(R.id.calculate_button);
 
 
         CheckBox footballCheckbox = findViewById(R.id.checkbox_football);
@@ -219,7 +221,7 @@ public class Home extends AppCompatActivity {
             alert.show(getSupportFragmentManager(), "alert");
         });
 
-        submitBtn.setOnLongClickListener(v -> {
+        calculator_button.setOnLongClickListener(v -> {
             LayoutInflater inflater = getLayoutInflater();
             View CalculatorView = inflater.inflate(R.layout.calculator, null);
 

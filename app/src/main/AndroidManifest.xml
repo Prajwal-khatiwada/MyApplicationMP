@@ -24,6 +24,7 @@
 
         <activity android:name=".unit_4.About" />
         <activity android:name=".unit_4.Contact" />
+        <activity android:name=".unit_6.ListViewMain" />
 
     </application>
 

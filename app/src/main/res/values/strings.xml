@@ -13,4 +13,33 @@
 
     </string-array>
 
+    <string-array name="Coffee_list">
+        <item>Cappuccino</item>
+        <item>Espresso</item>
+        <item>Latte</item>
+        <item>Mocha</item>
+        <item>Americano</item>
+        <item>Macchiato</item>
+        <item>Flat White</item>
+        <item>Iced Coffee</item>
+        <item>Tea</item>
+        <item>Hot Chocolate</item>
+        <item>Iced Tea</item>
+        <item>Coffee Mocha</item>
+        <item>Coffee Latte</item>
+        <item>Coffee Americano</item>
+        <item>Coffee Cappuccino</item>
+        <item>Coffee Mocha</item>
+        <item>Coffee Flat White</item>
+        <item>Coffee Iced Coffee</item>
+        <item>Coffee Tea</item>
+        <item>Coffee Hot Chocolate</item>
+        <item>Coffee Iced Tea</item>
+        <item>Coffee Mocha</item>
+        <item>Coffee Latte</item>
+        <item>Coffee Americano</item>
+        <item>Coffee Cappuccino</item>
+    </string-array>
+
+
 </resources>
