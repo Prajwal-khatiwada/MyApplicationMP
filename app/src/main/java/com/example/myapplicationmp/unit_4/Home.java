@@ -232,12 +232,18 @@ public class Home extends AppCompatActivity {
             Button addBtn = CalculatorView.findViewById(R.id.addCalculatorCalculateButton);
 
             addBtn.setOnClickListener(v1 -> {
-                int first, second, resultnum;
+                String num1Text = num1.getText().toString();
+                String num2Text = num2.getText().toString();
 
-                first = Integer.parseInt(num1.getText().toString());
-                second = Integer.parseInt(num2.getText().toString());
-                resultnum = first + second;
-                result.setText(String.valueOf(resultnum));
+                if (num1Text.isEmpty() || num2Text.isEmpty()) {
+                    result.setText("Please enter both numbers");
+                } else {
+
+                    int first = Integer.parseInt(num1Text);
+                    int second = Integer.parseInt(num2Text);
+                    int resultnum = first + second;
+                    result.setText(String.valueOf(resultnum));
+                }
             });
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setView(CalculatorView);
