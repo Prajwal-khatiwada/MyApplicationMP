@@ -41,5 +41,33 @@
         <item>Coffee Cappuccino</item>
     </string-array>
 
+    <string-array name="coffee_description">
+        <item>A coffee drink topped with foamed milk.</item>
+        <item>A strong, concentrated coffee brewed by forcing hot water through finely-ground coffee beans.</item>
+        <item>A coffee drink made with espresso and steamed milk.</item>
+        <item>A coffee drink combining chocolate, espresso, and steamed milk.</item>
+        <item>A diluted espresso with hot water.</item>
+        <item>An espresso with a small amount of foamed milk on top.</item>
+        <item>A coffee drink with espresso and steamed milk, but no froth.</item>
+        <item>Chilled coffee served over ice.</item>
+        <item>A beverage made by steeping cured leaves in hot water.</item>
+        <item>A warm drink made from melted chocolate or cocoa powder, milk, and sugar.</item>
+        <item>A chilled tea served over ice.</item>
+        <item>A coffee drink combining chocolate, espresso, and steamed milk.</item>
+        <item>A coffee drink made with espresso and steamed milk.</item>
+        <item>A diluted espresso with hot water.</item>
+        <item>A coffee drink topped with foamed milk.</item>
+        <item>A coffee drink combining chocolate, espresso, and steamed milk.</item>
+        <item>A coffee drink with espresso and steamed milk, but no froth.</item>
+        <item>Chilled coffee served over ice.</item>
+        <item>A beverage made by steeping cured leaves in hot water.</item>
+        <item>A warm drink made from melted chocolate or cocoa powder, milk, and sugar.</item>
+        <item>A chilled tea served over ice.</item>
+        <item>A coffee drink combining chocolate, espresso, and steamed milk.</item>
+        <item>A coffee drink made with espresso and steamed milk.</item>
+        <item>A diluted espresso with hot water.</item>
+        <item>A coffee drink topped with foamed milk.</item>
+    </string-array>
+
 
 </resources>

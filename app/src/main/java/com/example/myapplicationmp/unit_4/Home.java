@@ -27,6 +27,7 @@ import android.widget.TextView;
 import com.example.myapplicationmp.unit_2.Unit_2;
 import com.example.myapplicationmp.unit_4.About;
 import com.example.myapplicationmp.unit_4.Contact;
+import com.example.myapplicationmp.unit_6.GridViewMain;
 import com.example.myapplicationmp.unit_6.ListViewMain;
 import com.google.android.material
         .snackbar
@@ -101,8 +102,15 @@ public class Home extends AppCompatActivity {
             startActivity(i);
             return true;
         }
+
+        if (selectedItem == R.id.appOptionsContact) {
+            Intent i = new Intent(Home.this, GridViewMain.class);
+            startActivity(i);
+            return true;
+        }
         return false;
     }
+
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {

@@ -6,19 +6,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import com.example.myapplicationmp.R;
 
-import java.util.Objects;
 
-public class ListViewMain extends AppCompatActivity {
+public class CustomListViewMain extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
@@ -39,15 +36,13 @@ public class ListViewMain extends AppCompatActivity {
         ListView listView = findViewById(R.id.listViewMain);
         ViewGroup rootLayout = findViewById(R.id.listViewMainLayout);
 
-        String[] coffeeList = res.getStringArray(R.array.Coffee_list);
-        ArrayAdapter<String> coffeeAdapter = new ArrayAdapter<>(
-                Objects.requireNonNull(this.peekAvailableContext()),
-                R.layout.unit_3_spinner_item,
-                R.id.spinnerItemText,
-                coffeeList
-        );
+        String[] titleList = res.getStringArray(R.array.Coffee_list);
+        String[] descriptionlist = res.getStringArray(R.array.coffee_description);
+        int[] imagelist = {R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon};
 
-        listView.setAdapter(coffeeAdapter);
+        CustomListItem customAdapter = new CustomListItem(this, imagelist, titleList, descriptionlist);
+
+        listView.setAdapter(customAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -60,6 +55,5 @@ public class ListViewMain extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 }
