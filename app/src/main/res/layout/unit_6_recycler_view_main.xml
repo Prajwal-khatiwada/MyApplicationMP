@@ -32,6 +32,7 @@
         android:clipToPadding="false"
         android:paddingTop="40dp"
         android:paddingBottom="80dp"
+
         android:scrollbarStyle="outsideOverlay"
         android:scrollbarThumbVertical="@color/light_grey"
         android:scrollbars="vertical" />

@@ -38,7 +38,31 @@ public class CustomListViewMain extends AppCompatActivity {
 
         String[] titleList = res.getStringArray(R.array.Coffee_list);
         String[] descriptionlist = res.getStringArray(R.array.coffee_description);
-        int[] imagelist = {R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon};
+        int[] imagelist = {R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,};
 
         CustomListItem customAdapter = new CustomListItem(this, imagelist, titleList, descriptionlist);
 

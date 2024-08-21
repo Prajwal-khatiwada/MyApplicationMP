@@ -36,7 +36,32 @@ public class RecyclerViewListMain extends AppCompatActivity {
 
         String[] coffeeList = res.getStringArray(R.array.Coffee_list);
         String[] coffeeDescription = res.getStringArray(R.array.coffee_description);
-        int[] imageIds = {R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon, R.drawable.icon};
+        int[] imageIds = {
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon,
+                R.drawable.icon};
 
         for (int i = 0; i < coffeeList.length; i++) {
             albumDetails.add(new AlbumDetail(coffeeList[i], coffeeDescription[i], imageIds[i]));

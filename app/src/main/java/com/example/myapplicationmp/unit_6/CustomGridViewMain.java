@@ -29,7 +29,7 @@ public class CustomGridViewMain extends AppCompatActivity {
                 "This is description 4"
         };
 
-        GridViewMain adapter = new GridViewMain(this, title, description);
+        //GridViewMain adapter = new GridViewMain(this, title, description);
     }
 }
 

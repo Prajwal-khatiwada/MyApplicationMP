@@ -11,8 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:divider="@color/light_grey"
-        android:dividerHeight="1dp"
         android:footerDividersEnabled="false"
         android:overScrollFooter="@color/transparent"
         android:paddingTop="30dp"

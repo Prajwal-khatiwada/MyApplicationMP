@@ -25,10 +25,17 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.myapplicationmp.unit_2.Unit_2;
+import com.example.myapplicationmp.unit_3.Unit_3;
 import com.example.myapplicationmp.unit_4.About;
 import com.example.myapplicationmp.unit_4.Contact;
+import com.example.myapplicationmp.unit_6.CustomGridViewMain;
+import com.example.myapplicationmp.unit_6.CustomListViewMain;
 import com.example.myapplicationmp.unit_6.GridViewMain;
 import com.example.myapplicationmp.unit_6.ListViewMain;
+import com.example.myapplicationmp.unit_6.RecyclerViewListMain;
+import com.example.myapplicationmp.unit_7.MapViewMain;
+import com.example.myapplicationmp.unit_7.UserProfileMain;
+import com.example.myapplicationmp.unit_7.UserProfileServerMain;
 import com.google.android.material
         .snackbar
         .Snackbar;
@@ -40,6 +47,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplicationmp.R;
 import com.example.myapplicationmp.util.AlertUtil;
@@ -61,6 +69,11 @@ public class Home extends AppCompatActivity {
 
     private Button press_me_button;
     private Button calculator_button;
+    private Button database_button;
+
+    private Button sql_button;
+
+    private Button map_button;
 
 
     @Override
@@ -98,13 +111,19 @@ public class Home extends AppCompatActivity {
         int selectedItem = item.getItemId();
 
         if (selectedItem == R.id.appOptionsAbout) {
-            Intent i = new Intent(Home.this, ListViewMain.class);
+            Intent i = new Intent(Home.this, CustomListViewMain.class);
             startActivity(i);
             return true;
         }
 
         if (selectedItem == R.id.appOptionsContact) {
-            Intent i = new Intent(Home.this, GridViewMain.class);
+            Intent i = new Intent(Home.this, CustomGridViewMain.class);
+            startActivity(i);
+            return true;
+        }
+
+        if (selectedItem == R.id.appOptionsLogout) {
+            Intent i = new Intent(Home.this, RecyclerViewListMain.class);
             startActivity(i);
             return true;
         }
@@ -196,7 +215,9 @@ public class Home extends AppCompatActivity {
         contact_button = findViewById(R.id.contact_button);
         press_me_button = findViewById(R.id.press_me_button);
         calculator_button = findViewById(R.id.calculate_button);
-
+        database_button = findViewById(R.id.user_details);
+        sql_button = findViewById(R.id.user_details_database);
+        map_button = findViewById(R.id.map_button);
 
         CheckBox footballCheckbox = findViewById(R.id.checkbox_football);
         CheckBox basketballCheckbox = findViewById(R.id.checkbox_basketball);
@@ -217,9 +238,30 @@ public class Home extends AppCompatActivity {
             }
         });
 
-        contact_button.setOnClickListener(v -> {
-            Intent i = new Intent(Home.this, Contact.class);
-            startActivityForResult(i, 1);
+        database_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Home.this, UserProfileMain.class);
+                startActivity(i);
+
+            }
+        });
+
+        sql_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Home.this, UserProfileServerMain.class);
+                startActivity(i);
+
+            }
+        });
+        map_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Home.this, MapViewMain.class);
+                startActivity(i);
+
+            }
         });
 
 
