@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mapViewRoot"
-    tools:context=".unit_7_MapViewMain">
+    tools:context=".unit_7.MapViewMain">
 
     <com.google.android.gms.maps.MapView
         android:layout_width="match_parent"
